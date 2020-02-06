@@ -18,7 +18,7 @@ function createTile(){
     noFill();
     stroke('pink');
     strokeWeight(10);
-    circle(100, 60, 50);
+    circle(100, 45, 50);
     circle(100, 145, 50);
 }
 function draw() {
