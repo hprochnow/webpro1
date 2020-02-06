@@ -29,7 +29,7 @@ function draw() {
     createTile(0, 200, 'magenta', 'yellow','black', 'yellow');
     createTile(0,200, 'yellow', 'white','red', 'pink');
     createTile(200,-400, 'black', 'white','magenta', 'pink');
-    createTile(0, 200, 'red', 'yellow','black', 'pink');
+    createTile(0, 200, 'red', 'yellow','', 'pink');
     createTile(0,200, 'black', 'white','red', 'pink'); 
 
 }
