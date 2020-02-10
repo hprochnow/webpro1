@@ -21,7 +21,7 @@ function makeArm(rotateBy) {
 }
 function draw() {
     translate(300, 300);
-    rotate(rotateBy); //come back to this
+    rotate(rotateBy); 
     makeArm(rotateBy);
     rotateBy += 5;
 }
