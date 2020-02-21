@@ -1,14 +1,17 @@
 let bubble;
 
 function setup() {
-    createCanvas(600, 400);
+    createCanvas(600, 400);  
     bubble = new Bubble();
 }
 
  function draw() {
    background(0);
+for (let k = 0; k < 10; k++){
     bubble.move();
-    bubble.show();
+    bubble.show();   
+  }
+
 }
 
 
