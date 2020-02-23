@@ -1,19 +1,31 @@
 let myCard;
 const DOWN = 'down';
 const UP = 'up';
+let startingX = 129;
+let startingY = 129;
+let cards = [];
+const gameState ={
+}
 function setup() {
     createCanvas(1250, 1250);
     background(66, 135, 245);
-    myCard = new Card();
+    for (let k = 0; k < 2; k++) {
+    for (let i = 0; i < 5; i++) {
+        cards.push(new Card(startingX, startingY)); 
+        startingX += 100;
+    }
+    startingY += 150;
+    startingX += 100;
+    }
 }
 function mousePressed() {
     console.log (myCard.didHit(mouseX, mouseY));
 }
 
 class Card{
-    constructor (){   //properties
-        this.x = 129; 
-        this.y = 129;
+    constructor (x, y){   //properties
+        this.x = x; 
+        this.y = y;
         this.width = 200;
         this.height = 200;
         this.face = DOWN;
