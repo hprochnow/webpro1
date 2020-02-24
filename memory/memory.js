@@ -11,6 +11,10 @@ const gameState ={
     attempts: 0,
     waiting: false
 };
+
+// Preload functions 
+
+let myFont = loadFont('fonts/HARLOWSI.ttf');
 let cardfaceArray = [];
 let cardBack;
 function preload(){
@@ -69,6 +73,7 @@ function draw () {
     gameState.waiting = false;
     fill('#cca200')
     textSize(36);
+    textFont(myFont);
     text('Attempts: ' + gameState.attempts, 100, 900);
     text('Matches: ' + gameState.numMatched, 100, 950);
     textSize(36);
