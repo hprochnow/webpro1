@@ -1,25 +1,34 @@
-let myCard;
+
 const DOWN = 'down';
 const UP = 'up';
-let startingX = 129;
-let startingY = 129;
+let startingX = 100;
+let startingY = 100;
 let cards = [];
 const gameState ={
+};
+let cardBack;
+function preload(){
+    cardBack = loadImage('images/cardback.jpg');
 }
 function setup() {
-    createCanvas(1250, 1250);
+    createCanvas(1000, 1000);
     background(66, 135, 245);
-    for (let k = 0; k < 2; k++) {
-    for (let i = 0; i < 5; i++) {
+    for (let k = 0; k < 3; k++) {
+        for (let i = 0; i < 3 ; i++) { 
         cards.push(new Card(startingX, startingY)); 
-        startingX += 100;
+        startingX += 250;
     }
-    startingY += 150;
-    startingX += 100;
-    }
+    startingY += 250;
+    startingX = 100;
+}
 }
 function mousePressed() {
-    console.log (myCard.didHit(mouseX, mouseY));
+    for (let j = 0; j <= cards.length; j++) {
+        if(cards[j].didHit(mouseX, mouseY)){
+            console.log('flipped');
+        }
+    }
+
 }
 
 class Card{
@@ -34,7 +43,8 @@ class Card{
     show (){        //methods
         if(this.face === DOWN) {
             fill('yellow'); 
-            rect (this.x, this.y, this.width, this.height, 10);    
+            rect (this.x, this.y, this.width, this.height, 10);
+            image(cardBack, this.x, this.y)    
         } else {
             fill ('red');
             rect (this.x, this.y, this.width, this.height, 10);
