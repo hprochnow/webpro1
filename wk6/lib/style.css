@@ -1,0 +1,24 @@
+H1 {
+    font-family: 'Homemade Apple';
+    font-size: 55px;
+    padding: 1rem;
+
+}
+H2{
+  padding: 2rem;
+}
+li{
+  padding: 1rem;
+}
+body {
+  font-family: 'Spartan';
+  color: whitesmoke;
+  background-color: black;
+
+}
+input{
+  margin: 2rem; 
+  padding: 2rem;
+}
+
+

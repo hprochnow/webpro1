@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Spartan&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="myApp">
+      
+      <h1> Ten Llama Facts</h1>
+      <ul>
+        <li>{{llamaOne}}</li>
+        <li>{{llamaTwo}}</li>
+        <li>{{llamaThree}}</li>
+        <li>{{llamaFour}}</li>
+        <li>{{llamaFive}}</li>
+        <li>{{llamaSix}}</li>
+        <li>{{llamaSeven}}</li>
+        <li>{{llamaEight}}</li>
+        <li>{{llamaNine}}</li>
+        <li>{{llamaTen}}</li>
+        <li>
+          <span v-if="seen">BONUS LLAMA FACT: Lifespan of llamas is between 20 and 30 years</span>
+        </li>
+      </ul>
+
+      <h2> Enter Your Llama Fact Below </h2>
+      <input v-model="message">
+      <button>Submit</button>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </body>
+</html>
+

@@ -4,8 +4,9 @@ const UP = 'up';
 let startingX = 100;
 let startingY = 100;
 let cards = [];
+let myFont;
 const gameState ={
-    totalPairs: 4,
+    totalPairs: 5,
     flippedCards: [],
     numMatched: 0,
     attempts: 0,
@@ -14,10 +15,10 @@ const gameState ={
 
 // Preload functions 
 
-let myFont = loadFont('fonts/HARLOWSI.ttf');
 let cardfaceArray = [];
 let cardBack;
 function preload(){
+    myFont = loadFont('fonts/HARLOWSI.TTF');
     cardBack = loadImage('images/cardback.jpg');
     cardfaceArray = [
         loadImage('images/cowgirl.jpg'),
@@ -32,10 +33,10 @@ function preload(){
     ]
 }
 function setup() {
-    createCanvas(1000, 1000);
+    createCanvas(800, 1400);
     background(66, 135, 245);
     let selectedFaces = [];
-    for (let z = 0; z < 4; z++) {
+    for (let z = 0; z < 5; z++) {
         const randomIdx = floor(random(cardfaceArray.length));
         const face = cardfaceArray[randomIdx];
         selectedFaces.push(face);
@@ -44,8 +45,8 @@ function setup() {
         cardfaceArray.splice(randomIdx, 1);
     }
     selectedFaces = shuffleArray(selectedFaces);
-    for (let k = 0; k < 3; k++) {
-        for (let i = 0; i < 3 ; i++) { 
+    for (let k = 0; k < 5; k++) {
+        for (let i = 0; i < 2 ; i++) { 
             const faceImage = selectedFaces.pop();
         cards.push(new Card(startingX, startingY, faceImage)); 
         startingX += 250;
@@ -73,9 +74,9 @@ function draw () {
     gameState.waiting = false;
     fill('#cca200')
     textSize(36);
-    textFont(myFont);
-    text('Attempts: ' + gameState.attempts, 100, 900);
-    text('Matches: ' + gameState.numMatched, 100, 950);
+    textFont('sans serif');
+    text('Attempts: ' + gameState.attempts, 600, 900);
+    text('Matches: ' + gameState.numMatched, 600, 950);
     textSize(36);
     text('Click each card to find a match!' , 50, 50);
 
@@ -130,6 +131,8 @@ class Card{
     show (){        //methods
         if(this.face === UP || this.isMatch) {
             fill ('red');
+            textSize(36);
+            text('WILDCARD!');
             rect (this.x, this.y, this.width, this.height);
             image (this.cardFaceImg, this.x, this.y);   
         } else {
