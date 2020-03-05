@@ -7,9 +7,10 @@
   </head>
 
   <body>
-    <div id="myApp">
+    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"id="myApp" v-cloak>
 
-      <h1> Ten Llama Facts</h1>
+      <h1 v-bind:style='headerStyle'> Ten Differences Between <a v-bind:href ='linkAlpaca'>Alpacas</a> and <a v-bind:href= 'linkLlama'> Llamas</a>
+      </h1>
       <ul>
         <li>{{llamaOne}}</li>
         <li>{{llamaTwo}}</li>
@@ -35,4 +36,5 @@
     <script src="lib/script.js"></script>
   </body>
 </html>
+
 

@@ -1,0 +1,24 @@
+[v-cloak] {
+  display: none;
+}
+H1{
+    font-family: 'Homemade Apple';
+    font-size: 55px;
+    padding: 1rem;
+
+}
+H2{
+  padding: 2rem;
+}
+li{
+  padding: 1rem;
+}
+body {
+  font-family: 'Spartan';
+  background-color: rgb(235, 208, 208);
+
+}
+input{
+  margin: 2rem; 
+}
+
