@@ -1,0 +1,34 @@
+[v-cloak] {
+  display: none;
+}
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+  color: rgb(199, 202, 12);
+}
+.even {
+    background: rgb(3, 52, 75);
+}
+.odd {
+    background: rgb(158, 11, 60);
+}
+table {
+    align-self: center;
+    margin-left: px;
+    color: rgb(219, 233, 240) ;
+    background-color: rgb(10, 7, 0);
+    padding: 40 px;
+    border: solid 10px rgb(199, 202, 12);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+th {
+    padding: 20px;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 20px;
+    font-size: medium;
+
+}
