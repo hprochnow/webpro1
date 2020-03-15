@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+        <script src="lib/script.js"></script>
+    <title>Art Collection Array</title>
+  </head>
+
+  <body>
+      <h1>Haley's Art Collection</h1>
+      <div id="app" v-cloak> 
+        <table>
+          <thead>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Year</th>
+            <th>Style</th>
+            <th>Image</th>
+            <th>Actions</th>
+          </thead>
+          <tbody>
+            <tr 
+              v-for="(art, index) in artList" 
+              v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !==0
+            }">
+                <td>{{art.name}}</td>
+                <td>{{art.artist}}</td>
+                <td>{{art.year}}</td>
+                <td>{{art.style}}</td>
+                <td><img src= "artList.image"></td>
+                 <td class= art collected>
+              <button type="button" v-on:click="deleteItem(art)">Delete</button>
+            </td>   
+            </tr>
+          </tbody>
+        </table>
+        <form v-on:submit.prevent="submitHandler" class="new-art-form">
+          <fieldset>
+            <legend>Add Art to My Collection!
+            </legend>
+            
+            <div>
+              <label for="name">Title</label>
+              <input id="name" type="text" v-model="newArt.name">
+            </div>
+
+            <div>
+              <label for="artist">Artist</label>
+              <input id="artist" type="text"
+              v-model="newArt.artist">
+            </div>
+
+            <div>
+              <label for="year">Year</label>
+              <input id="year" type="date"
+              v-model="newArt.year">
+            </div>  
+
+            <div>
+              <label for="style">Style</label>
+              <input id="style" type="text"
+              v-model="newArt.style">
+            </div>
+          <button type="submit">Submit</button>
+          </fieldset>  
+        </form>
+            <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="lib/script.js"></script>
+      </div>
+      
+  </body>
+</html>
+

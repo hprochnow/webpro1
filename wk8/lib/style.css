@@ -1,0 +1,69 @@
+[v-cloak] {
+  display: none;
+}
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+  color: rgb(109, 110, 7);
+  padding: 25px 0 0 25px;
+
+
+}
+.even {
+    background: rgb(199, 202, 12);
+}
+.odd {
+    background: rgb(220, 220, 220);
+    color: black;
+}
+table {
+
+    margin-bottom: 25px;
+    color: rgb(219, 233, 240) ;
+    background-color: rgb(10, 7, 0);
+    padding: 40 px;
+    border: solid 10px rgb(109, 110, 7);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+th {
+
+    padding: 20px;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+td {
+
+    padding: 20px;
+    font-size: medium;
+
+}
+.new-art-form fieldset {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  padding: 40 px;
+  background-color: rgb(220, 220, 220);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  
+  
+}
+.new-art-form div {
+  margin: 10px 0;
+  width: 120px;
+}
+.new-art-form div label {
+  max-width: 120px;
+}
+.new-art-form input {
+  max-width: 110px;
+  display: block;
+}
+button {
+  width:80px;
+  display: block;
+  border: solid 2px rgb(109, 110, 7);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
