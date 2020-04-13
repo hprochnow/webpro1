@@ -4,11 +4,12 @@ const vm = new Vue({
     data: {
         tacos: []
     },
+
     methods: {
-       getTacos: function () {
+       getTacos: function() {
            axios.get(baseURL + "/random/?full-taco=true").then(function(response){
-               console.log(response);
-               vm.tacos = response.data;
+            console.log(response);
+            vm.tacos = response.data;
            })
         }
     },

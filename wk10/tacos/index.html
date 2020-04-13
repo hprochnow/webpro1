@@ -12,11 +12,11 @@
     <h1>What Kind of Taco Do you Want?</h1>
     <div id="tacoApp" class="cards">
         <div v-for="taco in tacos" v-bind:key="taco.id">
-            <h3>{{tacos.name}}</h3>
-            <div>{{tacos.recipe}}</div>
-            <div>{{tacos.mixin}}</div>
-            <div>{{tacos.condiment}}</div>
-            <div>{{tacos.shell}}</div>
+            <h3>{{taco.name}}</h3>
+            <p>{{taco.recipe}}</p>
+            <p>{{taco.mixin}}</p>
+            <p>{{taco.condiment}}</p>
+            <p>{{taco.shell}}</p>
         </div>
     </div>
     <script src="lib/script.js"></script>
