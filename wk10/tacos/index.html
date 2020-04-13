@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <link rel="stylesheet" href="lib/script.css">
+    <title>Types of Tacos</title>
+</head>
+<body>
+    <h1>What Kind of Taco Do you Want?</h1>
+    <div id="tacoApp" class="cards">
+        <taco-types v-bind:taco="base_layer" v-for="base_layer in taco"></taco-types>
+    </div>
+    <script src="lib/script.js"></script>
+</body>
+</html>
