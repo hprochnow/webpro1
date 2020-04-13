@@ -1,1 +1,33 @@
+[v-cloak] {
+    display: none;
+  }
 
+  html{
+      background: black;
+      font-family: Arial, Helvetica, sans-serif;
+      color: darkorange;
+  }
+
+  img{
+      max-width: 50px;
+  }
+  .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+  }
+  .track {
+    width: 144px;
+    border: 4px darkorange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 20px;
+    background: rgb(29, 29, 29);
+    
+}
