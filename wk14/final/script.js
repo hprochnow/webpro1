@@ -1,5 +1,5 @@
-let mic;
 let song;
+var amp;
 
 function preload (){
  song = loadSound('sound/talking.mp3');
@@ -7,33 +7,43 @@ function preload (){
 }
 
 function setup() {
+  background('black');
   createCanvas(710, 510);
   song.play();
-  // New Audio In
-  mic = new p5.AudioIn();
- // start the Audio Input.
-  mic.start();
+  amp = new p5.Amplitude();
+}
+function mousePressed() {
+  if (song.isPlaying()) {
+    // .isPlaying() returns a boolean
+    song.stop();
+    background(0);
+  } else {
+    song.play();
+    background(0, 255, 0);
+  }
 }
 
 
 function draw() {
-  background(0);
   fill('yellow');
   ellipse(325, 350, 200);
   strokeWeight(10);
 
   // Get the overall volume (between 0 and 1.0)
-  let vol = mic.getLevel();
+  let vol = amp.getLevel();
   fill('red');
   // Face with moving elements
-  let h = map(vol*5, 0, 1, height, 0);
+  let h = map(vol, 0, 1, height, 1);
   stroke('red');
   point(width / 2, h - 175);
   point(width / 2.5, h - 175);
   ellipse(width / 2.25, h - 110, 75, 10);
   ellipse(width / 2.25, 405, 75, 10);
   //Funky Face Hat
-  fill('blue');
-  quad(200, 250, 310, 250, 400, 120, 407, 285);
+  fill("blue");
+  strokeWeight(15);
+  line(300, 250, 215, 250);
+  // hat body
+  rect(300, 200, 65, 50);
   
 }
